@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import BasicLayout from "../layouts/BasicLayout";
 
 const MainPage = () => {

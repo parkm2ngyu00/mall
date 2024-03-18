@@ -22,4 +22,5 @@ const BasicMenu = () => {
 		</nav>
 	);
 };
+
 export default BasicMenu;
