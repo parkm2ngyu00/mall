@@ -8,15 +8,15 @@ import java.time.format.DateTimeFormatter;
 import java.time.temporal.TemporalAccessor;
 import java.util.Locale;
 
-public class LocalDateFormatter implements Formatter {
+public class LocalDateFormatter implements Formatter<LocalDate> {
 
     @Override
-    public Object parse(String text, Locale locale) throws ParseException {
+    public LocalDate parse(String text, Locale locale) throws ParseException {
         return LocalDate.parse(text, DateTimeFormatter.ofPattern("yyyy-MM-dd"));
     }
 
     @Override
-    public String print(Object object, Locale locale) {
-        return DateTimeFormatter.ofPattern("yyyy-MM-dd").format((TemporalAccessor) object);
+    public String print(LocalDate object, Locale locale) {
+        return DateTimeFormatter.ofPattern("yyyy-MM-dd").format(object);
     }
 }
