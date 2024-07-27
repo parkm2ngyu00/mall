@@ -7,6 +7,8 @@ import com.example.mallapi.service.TodoService;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
@@ -17,6 +19,7 @@ import java.util.Map;
 @RequestMapping("/api/todo")
 public class TodoController {
 
+    private static final Logger log = LogManager.getLogger(TodoController.class);
     private final TodoService service;
 
     @GetMapping("/{tno}")
